@@ -60,6 +60,9 @@ GEM
     bootsnap (1.4.4)
       msgpack (~> 1.0)
     builder (3.2.3)
+    bullet (6.0.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     byebug (11.0.1)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
@@ -156,6 +159,7 @@ GEM
     tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uniform_notifier (1.12.1)
     web-console (4.0.0)
       actionview (>= 6.0.0.a)
       activemodel (>= 6.0.0.a)
@@ -175,6 +179,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bullet (~> 6.0)
   byebug
   graphiql-rails
   graphql (~> 1.9)
