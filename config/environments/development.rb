@@ -1,3 +1,4 @@
+# typed: strict
 Rails.application.configure do
   config.after_initialize do
     Bullet.enable = true

@@ -1,3 +1,4 @@
+# typed: strong
 # To sum up, in order to add a new mutation you need to complete the following steps:
 
 # Add a class implementing the mutation logic, which includes:

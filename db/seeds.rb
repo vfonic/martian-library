@@ -1,3 +1,4 @@
+# typed: strict
 john = User.create!(
   email: "john.doe@example.com",
   first_name: "John",
