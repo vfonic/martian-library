@@ -3,6 +3,7 @@ query LibraryQuery {
     id
     title
     user {
+      id
       email
     }
   }
