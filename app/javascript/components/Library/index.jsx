@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Query } from 'react-apollo';
 import cs from './styles';
 import { LibraryQuery } from './operations.graphql';
+import UpdateItemForm from '../UpdateItemForm';
 
 const Library = () => {
   const [item, setItem] = useState(null);
@@ -24,7 +25,11 @@ const Library = () => {
                     <div className={cs.user}>added by {user.email}</div>
                   ) : null}
                 </button>
-              ))}
+              ))
+          }
+          {item !== null && (
+            <UpdateItemForm {...item} onClose={() => setItem(null)} />
+          )}
         </div>
       )}
     </Query>
