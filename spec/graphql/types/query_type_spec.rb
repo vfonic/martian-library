@@ -19,8 +19,8 @@ RSpec.describe Types::QueryType do
 
       result = MartianLibrarySchema.execute(query).as_json
 
-      expect(result.dig('data', 'items')).to match_array(
-        items.map { |item| { 'title' => item.title } }
+      expect(result.dig('data', 'items').map{ |item| item['title'] }).to match_array(
+        items.map(&:title)
       )
     end
   end

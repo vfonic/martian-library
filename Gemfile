@@ -36,3 +36,4 @@ gem "ar_lazy_preload"
 
 gem 'sorbet', group: :development
 gem 'sorbet-runtime'
+gem 'pry-rails'
