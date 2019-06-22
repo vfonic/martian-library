@@ -5,7 +5,7 @@
 # the input type definition (arguments);
 # the return type definition (fields);
 # the #resolve method.
-# Add a new entry to MutationType.
+# Add a new entry to RootMutations.
 module Mutations
   class BaseMutation < GraphQL::Schema::Mutation
   end

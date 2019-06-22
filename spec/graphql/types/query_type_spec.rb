@@ -1,7 +1,7 @@
 # typed: false
 require 'rails_helper'
 
-RSpec.describe Types::QueryType do
+RSpec.describe RootQueries do
   describe 'items' do
     let(:query) do
       %(query {
