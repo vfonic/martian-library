@@ -24,4 +24,32 @@ RSpec.describe Types::QueryType do
       )
     end
   end
+
+  describe 'me' do
+    let(:query) do
+      %(query {
+        me {
+          email
+        }
+      })
+    end
+
+    context 'when no user is logged in' do
+      it 'returns nil' do
+        result = MartianLibrarySchema.execute(query).as_json
+
+        expect(result.dig('data', 'me')).to be nil
+      end
+    end
+
+    context 'when user is logged in' do
+      it 'returns curret user' do
+        user = create(:user)
+
+        result = MartianLibrarySchema.execute(query, context: { current_user: user }).as_json
+
+        expect(result.dig('data', 'me', 'email')).to eq(user.email)
+      end
+    end
+  end
 end
