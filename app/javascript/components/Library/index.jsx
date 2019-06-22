@@ -21,7 +21,7 @@ const Library = () => {
                   <div className={cs.title}>{title}</div>
                   {imageUrl && <img src={imageUrl} className={cs.image} />}
                   {user ? (
-                    <div className={cs.user}>added by ${user.email}</div>
+                    <div className={cs.user}>added by {user.email}</div>
                   ) : null}
                 </button>
               ))}

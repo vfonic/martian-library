@@ -1,7 +1,7 @@
 module Mutations
   class AddItemMutation < BaseMutation
-    argument :title, String, required: false
-    argument :description, String, required: true
+    argument :title, String, required: true
+    argument :description, String, required: false
     argument :image_url, String, required: false
 
     field :item, Types::ItemType, null: true
