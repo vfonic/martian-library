@@ -29,6 +29,19 @@ const UpdateItemForm = ({
                   description,
                   imageUrl,
                 },
+                optimisticResponse: {
+                  __typename: 'Mutation',
+                  updateItem: {
+                    __typename: 'UpdateItemMutationPayload',
+                    item: {
+                      id,
+                      __typename: 'Item',
+                      title,
+                      description,
+                      imageUrl,
+                    },
+                  },
+                },
               });
               onClose();
             }}
