@@ -7,9 +7,6 @@ RSpec.describe RootQueries do
       %(query {
         items {
           title
-          user {
-            fullName
-          }
         }
       })
     end
@@ -19,8 +16,8 @@ RSpec.describe RootQueries do
 
       result = MartianLibrarySchema.execute(query).as_json
 
-      expect(result.dig('data', 'items').map{ |item| item['title'] }).to match_array(
-        items.map(&:title)
+      expect(result.dig("data", "items")).to match_array(
+        items.map { |item| { "title" => item.title } }
       )
     end
   end
